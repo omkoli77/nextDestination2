@@ -1,0 +1,14 @@
+<!-- flash message -->
+    <% if(error[0]) {%>
+    <div class="alert alert-danger alert-dismissible  mt-3" >
+        <%= error %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" ></button>
+    </div>
+    <% } %>
+
+    <% if(success[0]) {%>
+    <div class="alert alert-success alert-dismissible  mt-3" >
+        <%= success %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" ></button>
+    </div>
+    <% } %>

@@ -1,0 +1,33 @@
+<% layout("layouts/boilerplate.ejs") -%>
+<body>
+    <form method="post" action="/users/signup" novalidate class="needs-validation">
+        <div class="col-6 offset-3">
+            <h1>Create New Acount</h1>
+        <div class="mb-3">
+            <label for="title" class="form-label">UserName:- </label>
+            <input type="text" name="user[username]" id="title" placeholder="Enter a username" class="form-control" required>
+            <div class="invalid-feedback">
+               Please choose a UserName.
+            </div>
+        </div>
+       
+        <div class="mb-3">
+            <label for="description" class="form-label">Email:- </label>
+            <input type="text" name="user[email]" id="description" placeholder="Enter a email" class="form-control" required></textarea>
+            <div class="invalid-feedback">
+                Email is required
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="Password" class="form-label">Password:- </label>
+            <input type="password" name="user[password]" id="password" placeholder="Enter a Password" class="form-control" required></textarea>
+            <div class="invalid-feedback">
+                Password is required
+            </div>
+        </div>
+
+        <button class="btn btn-outline-success">Submit</button>
+    </div>
+    </form>
+</body>

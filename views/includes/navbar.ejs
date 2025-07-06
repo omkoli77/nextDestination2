@@ -1,0 +1,111 @@
+<nav class="navbar navbar-expand-lg border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"> <i class="fa-brands fa-airbnb"></i>Destination</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <div class="ms-auto">
+        <form class="d-flex needs-validation" role="search" novalidate method="post" action="/listings/search">
+          <input class="form-control me-2 search-input" type="search" placeholder="Search Destination" name="search" required />
+          <button class="btn  search-bnt" type="submit">Search</button>
+        </form>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <span class="navbar-links-parent">
+        <a href="/listings/new" class="navbar-link create-listing">New Listing</a>
+       <% if(curentUser == "ok") {%>
+          <a href="/users/signup" class="navbar-link">Signup</a>
+          <a href="/users/login" class="navbar-link">Login</a>
+        <% } %>
+
+        <% if(curentUser !== "ok") {%>
+          <a href="/users/logout" class="navbar-link">Logout</a>
+        <% } %>
+      </span>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<!-- features -->
+<div class="row">
+  <div class="col-10 offset-1">
+    <div class="filters">
+
+      <a href="/listings/features/trending">
+      <div class="filter">
+        <i class="fa-solid fa-fire"></i>
+        <p>Trending</p>
+      </div>
+      </a>
+
+      <a href="/listings/features/rooms">
+      <div class="filter">
+        <i class="fa-solid fa-bed"></i>
+        <p>Rooms</p>
+      </div>
+      </a>
+
+      <a href="/listings/features/iconic city">
+      <div class="filter">
+        <i class="fa-solid fa-mountain-city"></i>
+        <p>Iconic City</p>
+      </div>
+      </a>
+
+      <a href="/listings/features/mountain">
+      <div class="filter">
+        <i class="fa-solid fa-mountain"></i>
+        <p>Mountain</p>
+      </div>
+      </a>
+
+      <a href="/listings/features/castle">
+      <div class="filter">
+        <i class="fa-solid fa-chess-rook"></i>
+        <p>Castle</p>
+      </div>
+      </a>
+
+      <a href="/listings/features/amazing poll">
+      <div class="filter">
+        <i class="fa-solid fa-person-swimming"></i>
+        <p>Amazing Poll</p>
+      </div>
+      </a>
+
+      <a href="/listings/features/camping">
+      <div class="filter">
+        <i class="fa-solid fa-tent-arrow-down-to-line"></i>
+        <p>Camping</p>
+      </div>
+      </a>
+
+      <a href="/listings/features/farms">
+      <div class="filter">
+        <i class="fa-solid fa-cow"></i>
+        <p>Farms</p>
+      </div>
+      </a>
+
+      <a href="/listings/features/arctic">
+      <div class="filter">
+        <i class="fa-solid fa-snowflake"></i>
+        <p>Arctic</p>
+      </div>
+      </a>
+
+      <div class="form-check-reverse form-switch">
+        <input class="form-check-input checkbox" type="checkbox" role="switch" id="switchCheckDefault">
+        <label class="form-check-label total-after-taxes-text" for="switchCheckDefault">Display Total After Taxes</label>
+      </div>
+
+    </div>
+  </div>
+</div>
+
