@@ -52,7 +52,7 @@
             <form method="post" action="/listings/<%= listing._id %>?_method=DELETE" >
                  
                 <% if(curentUser._id && curentUser._id.toString() == listing.owner._id.toString()) {%>
-                <a href="http://localhost:8080/listings/<%= listing._id %>/edit" class="btn btn-success mb-3">Edit</a>
+                <a href="/listings/<%= listing._id %>/edit" class="btn btn-success mb-3">Edit</a>
                 &nbsp;
                 <button class="btn btn-danger mb-3">Delete</button>
                 <% } %>
