@@ -5,7 +5,8 @@ const {review, Review} = require("./reviews");
 const listingSchema = new Schema({
     title:{
         type: String,
-        required: true
+        required: true,
+        lowercase: true
     },
 
     description:{
@@ -31,6 +32,7 @@ const listingSchema = new Schema({
     location: {
         type: String,
         required: true,
+        lowercase: true
     },
 
     country: {

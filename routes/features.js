@@ -5,7 +5,7 @@ const {Listing} = require("../models/listings.js");
 router.route("/:category")
 .get(async(req, res)=>{
     let {category} = req.params;
-    const listings = await Listing.find({category: category});
+    const listings = await Listing.find({category: category.toLowerCase()});
     console.log(category);
     res.render("./listing/index.ejs", {listings});
 });
