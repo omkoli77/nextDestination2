@@ -46,7 +46,7 @@
     <div class="row mt-3">
         <div class="col-8 ok"> 
             <h5><b>Entire rental unit in <%= listing.location %>, <%= listing.country %></b></h5>
-            <p>2 guests1 bedroom1 bed1 bathroom</p>
+            <p>2 guests 1 bedroom 1bed 1 bathroom</p>
             <p>Hosted By:- <b><%= listing.owner.username %></b> </p>
             <p> <b><%= listing.description %></b> </p>
             <form method="post" action="/listings/<%= listing._id %>?_method=DELETE" >
@@ -85,14 +85,14 @@
         </div>
 
         <div class="col-4 ok1">
-            <h4><b>&#x20B9;<%= listing.price %></b></h4>
+            <h5 class="h5"><u><b>&#x20B9;<%= listing.price.toLocaleString("en-IN") %></b></u></h5> for 2 nights
             <div class="calender">
                 <div>
-                    <label for="check-in" class="form-label">Check-In</label>
+                    <label for="check-in" class="form-label check-in">CHECK-IN</label>
                     <input type="date" name="check-in" id="check-in" class="form-control">
                 </div>
                  <div>
-                    <label for="check-out" class="form-label">Check-Out</label>
+                    <label for="check-out" class="form-label check-out">CHECK-OUT</label>
                     <input type="date" name="check-out" id="check-out" class="form-control">
                 </div>
             </div>
