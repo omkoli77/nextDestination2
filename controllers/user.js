@@ -59,7 +59,6 @@ exports.userLogin = async (req, res, next) => {
     };
 
     let { refreshToken, accesssToken } = await createTokens(user._id);
-    console.log(req.session.originalUrl);
     req.flash("success", "Welcome Back To Next Destination...!")
     res.cookie("accessToken", accesssToken, cookieOption)
     res.cookie("refreshToken", refreshToken, cookieOption)
